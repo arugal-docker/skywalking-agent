@@ -5,3 +5,5 @@ RUN  wget -P /usr http://mirror.bit.edu.cn/apache/skywalking/6.1.0/apache-skywal
         tar -zxvf apache-skywalking-apm-6.1.0.tar.gz && \
         mv apache-skywalking-apm-bin/agent /usr/skywalking && \
         rm -rf apache-skywalking-apm-*
+
+ENV JAVA_AGENT=-javaagent:/usr/skywalking/agent/skywalking-agent.jar
